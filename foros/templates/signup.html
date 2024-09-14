@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body style="font-family: 'Poppins', sans-serif;">
+  <header class="flex justify-center py-8 bg-[#282C34] text-white">
+    <div class="flex justify-between items-center w-full max-w-7xl">
+      <h1 class="text-[2rem] font-bold bg-gradient-to-r from-[#6ddaf4] to-[#645df0] bg-clip-text text-transparent">
+        ForoVox</h1>
+      <ul class="flex gap-8">
+        <li class="hover:underline transition-all underline-offset-2"><a href="">Iniciar sesion</a></li>
+        <li class="hover:underline transition-all underline-offset-2"><a class="pointer-events-none"
+            href="">Registrate</a></li>
+      </ul>
+    </div>
+  </header>
+  <main class="flex flex-col items-center">
+    <h2 class="text-2xl font-bold mt-12">Crea una cuenta</h2>
+    <p class="text-[#666666] mt-1.5">Rellena el formulario para poder registrarte</p>
+    <form action="post" class="mt-8">
+      <div class="flex flex-col max-w-[23rem] gap-4">
+        <input class="border border-[#B4B4B4] rounded-lg py-2 text-center" type="text" placeholder="Rut" required>
+        <input class="border border-[#B4B4B4] rounded-lg py-2 text-center" type="text" placeholder="Nombres" required>
+        <div class="flex gap-4">
+          <input class="w-full border border-[#B4B4B4] rounded-lg py-2 text-center" type="text"
+            placeholder="Apellido Materno" required>
+          <input class="w-full border border-[#B4B4B4] rounded-lg py-2 text-center" type="text"
+            placeholder="Apellidor Paterno" required>
+        </div>
+        <input class="border border-[#B4B4B4] rounded-lg py-2 text-center" type="email" placeholder="Correo" required>
+        <input class="border border-[#B4B4B4] rounded-lg py-2 text-center" type="text" placeholder="Nacionalidad"
+          required>
+        <input class="border border-[#B4B4B4] rounded-lg py-2 text-center" type="password" placeholder="Contraseña"
+          required>
+        <input class="border border-[#B4B4B4] rounded-lg py-2 text-center" type="password"
+          placeholder="Repetir contraseña" required>
+        <button type="submit"
+          class="bg-[#282C34] text-white hover:bg-[#3B4048] rounded-lg py-2 text-center">Registrar</button>
+      </div>
+    </form>
+    <p class="mt-5 text-[#666666]">Ya tienes una cuenta? <a href="/login"
+        class="text-black hover:underline underline-offset-2">Inicia Sesión</a></p>
+  </main>
+</body>
+
+</html>
