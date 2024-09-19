@@ -1,0 +1,75 @@
+{% load static %}
+<header class="flex justify-center px-4 py-2 bg-[#10182B] text-white">
+  <div class="flex justify-between items-center w-full max-w-7xl">
+    <div class="flex items-center gap-2">
+      <i class="ri-chat-4-line text-[2rem]"></i>
+      <h1 class="text-[2rem] hidden md:block font-bold font-serif">
+        ForoVox</h1>
+    </div>
+    <img src="{% static 'imagenes/tabula_rasa.png' %}" id="profile-image" alt="Foto de perfil"
+      class="size-11 rounded-full cursor-pointer xl:cursor-auto">
+  </div>
+</header>
+<div class="flex justify-center pt-8">
+  <aside class="max-w-7xl w-full">
+    <ul id="navigation-menu"
+      class="hidden xl:flex xl:flex-col fixed right-4 z-50 bg-white text-sm text-[#333333] gap-2 p-4 border-[0.094rem] w-full max-w-72 border-[#D9D9D9] rounded-lg xl:right-auto xl:left-auto xl:inset-auto">
+      <a href="">
+        <li
+          class="flex gap-3 items-center p-1 rounded-md hover:bg-[#f4f4f5] transition-colors hover:text-[#000000] cursor-pointer">
+          <img src="{% static 'imagenes/tabula_rasa.png' %}" alt="Foto de perfil" class="size-6 rounded-full">
+          Ver Perfil
+        </li>
+      </a>
+      <a href="/administrar_foros/">
+        <li
+          class="flex gap-3 items-center p-1 rounded-md hover:bg-[#f4f4f5] transition-colors hover:text-[#000000] cursor-pointer">
+          <i class="ri-group-2-line text-2xl"></i>
+          Administrar Foros
+        </li>
+      </a>
+      <a href="/administrar_tematicas/">
+        <li
+          class="flex gap-3 items-center p-1 rounded-md hover:bg-[#f4f4f5] transition-colors hover:text-[#000000] cursor-pointer">
+          <i class="ri-layout-masonry-line text-2xl"></i>
+          Administrar Tematicas
+        </li>
+      </a>
+      <a href="/gestionar_usuarios/">
+        <li
+          class="flex gap-3 items-center p-1 rounded-md hover:bg-[#f4f4f5] transition-colors hover:text-[#000000] cursor-pointer">
+          <i class="ri-user-line text-2xl"></i>
+          Gestionar Usuarios
+        </li>
+      </a>
+      <a href="/historial_acciones/">
+        <li
+          class="flex gap-3 items-center p-1 rounded-md hover:bg-[#f4f4f5] transition-colors hover:text-[#000000] cursor-pointer">
+          <i class="ri-history-line text-2xl"></i>
+          Historial de Acciones
+        </li>
+      </a>
+      <a href="">
+        <li
+          class="flex gap-3 items-center p-1 rounded-md hover:bg-[#f4f4f5] transition-colors hover:text-[#000000] cursor-pointer">
+          <i class="ri-logout-box-r-line text-2xl"></i>
+          Cerrar sesión
+        </li>
+      </a>
+    </ul>
+  </aside>
+</div>
+<script>
+  const profileImage = document.querySelector('#profile-image')
+  const navigationMenu = document.querySelector('#navigation-menu')
+
+  profileImage.addEventListener('click', () => {
+    navigationMenu.classList.toggle('hidden')
+  })
+
+  window.onclick = function (event) {
+    if (event.target.contains(navigationMenu) && event.target !== navigationMenu) {
+      navigationMenu.classList.add('hidden')
+    }
+  }
+</script>
