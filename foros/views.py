@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-# La página del index variará según el tipo de usuario y su estado de registro.
+
 def mostrarIndex(request):
     return render(request, 'index.html')
 
@@ -9,6 +9,9 @@ def mostrarLogin(request):
 
 def mostrarSignup(request):
     return render(request, 'signup.html')
+
+def mostrarLogout(request):
+    pass
 
 def mostrarPerfilUsuario(request):
     return render(request, 'perfil_usuario.html')
@@ -25,11 +28,17 @@ def mostrarCrearComentario(request):
 def mostrarEditarComentario(request):
     return render(request, 'editar_comentario.html')
 
+def mostrarAdministrarForos(request):
+    return render(request, 'administrar_foros.html')
+
 def mostrarCrearForo(request):
     return render(request, 'crear_foro.html')
 
 def mostrarEditarForo(request):
     return render(request, 'editar_foro.html')
+
+def mostrarAdministrarTematicas(request):
+    return render(request, 'administrar_tematicas.html')
 
 def mostrarCrearTematica(request):
     return render(request, 'crear_tematica.html')
@@ -37,8 +46,8 @@ def mostrarCrearTematica(request):
 def mostrarEditarTematica(request):
     return render(request, 'editar_tematica.html')
 
-def mostrarGestionarUsuario(request):
-    return render(request, 'gestionar_usuario.html')
+def mostrarGestionarUsuarios(request):
+    return render(request, 'gestionar_usuarios.html')
 
 def mostrarHistorialAcciones(request):
     return render(request, 'historial_acciones.html')
